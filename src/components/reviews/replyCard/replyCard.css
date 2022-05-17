@@ -1,0 +1,28 @@
+.reply-card {
+  padding: 1.25rem;
+  min-height: 9.125rem;
+  width: 100%;
+  background-color: #fbfcfd;
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-card-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reply-card-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.75rem;
+}
+
+.reply-card-date {
+  color: #8d95a3;
+}
+
+.reply-card-edit {
+  color: #0057b3;
+}

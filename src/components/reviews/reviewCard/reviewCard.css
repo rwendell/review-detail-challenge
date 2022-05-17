@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+.expanded {
+  width: 100%;
+  min-width: 18.5;
+}
+
 .review-card-content {
   flex-grow: 1;
 }
@@ -18,5 +23,5 @@
 }
 
 .review-card-date {
-    color: #8D95A3;
+  color: #8d95a3;
 }

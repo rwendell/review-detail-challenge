@@ -1,3 +1,7 @@
+import PropTypes from "prop-types"
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
+import { getDateString } from "../utils";
 import "./reviewCard.css";
 
 const getRatingEmoji = (rating) => {
@@ -20,11 +24,39 @@ const getRatingEmoji = (rating) => {
   }
 };
 
-const ReviewCard = ({ id, author, place, published_at, rating, content }) => {
-  const reviewDate = new Date(published_at).toLocaleDateString();
+const ReviewCard = ({
+  id,
+  author,
+  place,
+  published_at,
+  rating,
+  content,
+  expand,
+}) => {
+  const reviewDate = getDateString(published_at);
+  const navigate = useNavigate();
+
+  const onClick = useCallback(() => {
+    const to = `/reviews/${id}`;
+    const currentReview = {
+      state: {
+        id,
+        author,
+        place,
+        published_at,
+        rating,
+        content,
+      },
+    };
+
+    navigate(to, currentReview);
+  }, [id, navigate]);
 
   return (
-    <div className="review-card">
+    <div
+      className={expand ? "review-card expanded" : "review-card"}
+      onClick={expand ? null : onClick}
+    >
       <h2>{place}</h2>
       <span>{getRatingEmoji(rating)}</span>
       <p className="review-card-content">{content}</p>
@@ -33,6 +65,16 @@ const ReviewCard = ({ id, author, place, published_at, rating, content }) => {
       </div>
     </div>
   );
+};
+
+ReviewCard.propTypes = {
+  author: PropTypes.string,
+  content: PropTypes.string,
+  expand: PropTypes.bool,
+  id: PropTypes.number,
+  place: PropTypes.string,
+  published_at: PropTypes.string,
+  rating: PropTypes.number
 };
 
 export default ReviewCard;

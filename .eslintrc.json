@@ -19,7 +19,7 @@
       2,
       { "namedComponents": "arrow-function" }
     ],
-    "camelcase":"off", //TODO turn off only for api requests
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "camelcase": "off", //TODO turn off only for api requests
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }

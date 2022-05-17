@@ -1,0 +1,19 @@
+.new-reply {
+  padding: 1.25rem;
+  min-height: 15.625rem;
+  background-color: #fbfcfd;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 18.5rem;
+}
+
+.new-reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.new-reply-content {
+  min-height: 10rem;
+}
