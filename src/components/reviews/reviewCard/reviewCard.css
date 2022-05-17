@@ -1,0 +1,22 @@
+.review-card {
+  padding: 1.25rem;
+  min-height: 15.625rem;
+  width: 18.75rem;
+  background-color: #fbfcfd;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card-content {
+  flex-grow: 1;
+}
+
+.review-card-footer {
+  display: flex;
+  flex-direction: row;
+  gap: 1.75rem;
+}
+
+.review-card-date {
+    color: #8D95A3;
+}

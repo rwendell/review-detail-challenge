@@ -1,0 +1,13 @@
+.review-container-success{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2.5rem 7.5rem;
+  background-color: #8d95a3;
+  justify-content: center;
+  gap: 9.375rem;
+;
+}
+
+.review-container-error{
+  background-color: red;
+}
